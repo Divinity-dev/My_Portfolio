@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Header from './component/Header'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-     <p className='text-center text-orange-800'>hello world</p>
+      <Header/>
     </>
   )
 }
