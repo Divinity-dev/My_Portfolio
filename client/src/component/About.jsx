@@ -48,7 +48,8 @@ const About = () => {
               <span className="font-semibold"> International Franchise for Business Consulting (IFBC)</span>, 
               based in the United States of America. I have earned recognition for building software solutions for businesses at IFBC.
               <br /><br />
-              Click the button below to get my Resume.
+              Click the button below to get my Resume.<br/>
+              <button className='px-6 p-2 text-white bg-yellow-700 cursor-pointer'>Resume</button>
             </p>
           </div>
         </div>
