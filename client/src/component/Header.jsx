@@ -4,8 +4,8 @@ import profile2 from "/images/profile2.png";
 
 const Header = () => {
   return (
-    <div className="bg-[url('/images/sectionbg6.jpeg')] bg-cover bg-center p-6 md:py-2 md:px-20">
-      <Navbar />
+    <div className="bg-[url('/images/sectionbg6.jpeg')] bg-cover bg-center p-6 md:py-2 md:px-20" id='header'>
+      
       <div className="flex flex-col-reverse md:h-[90vh] md:flex-row justify-between items-center mt-1 gap-6">
         <h3 className="text-lg sm:text-xl md:text-3xl text-white flex-1 text-center md:text-left leading-snug">
           Hello, I'm <br />

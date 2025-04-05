@@ -4,12 +4,12 @@ import profile from "/images/profile.png";
 
 const About = () => {
   return (
-    <div className="bg-[url('/images/sectionbg4.jpeg')] bg-cover bg-center p-6 md:p-12">
+    <div className="bg-[url('/images/sectionbg4.jpeg')] bg-cover bg-center p-6 md:p-12" id='about'>
       <div className="flex flex-col gap-6 bg-indigo-950 rounded-lg shadow-lg p-6 md:p-10">
         
         {/* Social Icons */}
         <ul className="flex justify-center md:justify-between items-center py-4 px-6 gap-6 md:px-20 text-white bg-sky-950 rounded-md">
-          <li className="bg-red-700 p-2 rounded-md hover:bg-red-600 transition">
+          <li className="bg-btyellow p-2 w-[100px] flex justify-center items-center hover:bg-red-600 transition">
             <LinkedIn />
           </li>
           <li className="p-2 rounded-md hover:bg-gray-700 transition">
@@ -49,7 +49,7 @@ const About = () => {
               based in the United States of America. I have earned recognition for building software solutions for businesses at IFBC.
               <br /><br />
               Click the button below to get my Resume.<br/>
-              <button className='px-6 p-2 text-white bg-yellow-700 cursor-pointer'>Resume</button>
+              <button className='px-6 p-2 text-white bg-btyellow mt-3 cursor-pointer'>Resume</button>
             </p>
           </div>
         </div>

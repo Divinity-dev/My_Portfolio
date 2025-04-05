@@ -3,8 +3,9 @@ import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import { projects } from "./ProjectDetails";
 
 const Project = () => {
-  const [startIndex, setStartIndex] = useState(0); // Track the first visible project index
-  const projectsPerPage = 3; // Adjust based on your design
+  const [startIndex, setStartIndex] = useState(0); 
+  const [bg, setBg] = useState(false)
+  const projectsPerPage = 3; 
 
   const handleNext = () => {
     setStartIndex((prevIndex) =>
@@ -19,16 +20,16 @@ const Project = () => {
   };
 
   return (
-    <div className="bg-indigo-950 px-6 py-10 md:px-20">
+    <div className="bg-indigo-950 px-6 py-10 md:px-20"id="projects">
       {/* Header Section */}
       <div className="flex justify-between items-center text-white mb-6">
         <h3 className="text-lg md:text-xl font-semibold">Projects</h3>
-        <div className="border-[1px] px-4 flex">
+        <div className="border-[1px] flex">
           <button onClick={handlePrev}>
-            <ArrowBack />
+            <ArrowBack onClick={()=>{setBg(false)}} className={bg? "bg-transparent":"bg-btyellow"}/>
           </button>
           <button onClick={handleNext} className="border-l-[1px] border-white">
-            <ArrowForward />
+            <ArrowForward onClick={()=>{setBg(true)}} className={bg? "bg-btyellow":"bg-transparent"}/>
           </button>
         </div>
       </div>
@@ -38,9 +39,10 @@ const Project = () => {
         {projects
           .slice(startIndex, startIndex + projectsPerPage)
           .map((project) => (
+           <div className="anim">
             <div
               key={project.index}
-              className="flex flex-col items-center w-full sm:w-80 bg-sky-950 rounded-lg shadow-lg"
+              className="flex flex-col items-center w-full sm:w-80 bg-sky-950 rounded-lg shadow-lg "
             >
               <img
                 src={project.image}
@@ -55,14 +57,15 @@ const Project = () => {
                   {project.Desc}
                 </p>
                 <div className="flex justify-center gap-3">
-                  <button className="px-4 py-2 text-sm text-white bg-yellow-700 rounded-md">
+                  <button className="px-4 py-2 text-sm text-white bg-btyellow rounded-md">
                     See Code
                   </button>
-                  <button className="px-4 py-2 text-sm text-white bg-yellow-700 rounded-md">
+                  <button className="px-4 py-2 text-sm text-white bg-btyellow rounded-md">
                     See Live
                   </button>
                 </div>
               </div>
+            </div>
             </div>
           ))}
       </div>
