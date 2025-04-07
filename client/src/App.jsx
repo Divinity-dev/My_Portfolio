@@ -6,6 +6,7 @@ import "./app.css"
 import Navbar from './component/Navbar'
 import Skills from './component/Skills'
 import Contact from './component/Contact'
+import Footer from './component/Footer'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Project/>
       <Skills/>
       <Contact/>
+      <Footer/>
     </>
   )
 }

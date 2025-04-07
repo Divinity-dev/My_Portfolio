@@ -67,7 +67,7 @@ const Contact = () => {
       };
       
   return (
-    <div className='py-10 px-20 bg-indigo-950 flex flex-col  items-center'>
+    <div className='py-10 px-20 bg-indigo-950 flex flex-col  items-center ' id='contact'>
       <h2 className='text-center text-white text-3xl mb-4'>Contact me </h2>
       <div className='flex flex-col md:flex-row justify-between items-center'>
       {/* Left side */}

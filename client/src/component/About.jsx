@@ -11,16 +11,25 @@ const About = () => {
         {/* Social Icons */}
         <ul className="flex justify-center md:justify-between items-center py-4 px-6 gap-6 md:px-20 text-white bg-sky-950 rounded-md">
           <li className="bg-btyellow p-2 w-[100px] flex justify-center items-center hover:bg-red-600 transition">
+           <a href="https://www.linkedin.com/in/divinity20/" 
+            target="_blank" >
             <LinkedIn />
+            </a>
           </li>
           <li className="p-2 rounded-md hover:bg-gray-700 transition">
+            <a href="https://github.com/Divinity-dev" target="_blank">
             <GitHub />
+            </a>
           </li>
           <li className="p-2 rounded-md hover:bg-blue-600 transition">
+            <a href="https://web.facebook.com/divine.asiriuwa" target="_blank">
             <Facebook />
+            </a>
           </li>
           <li className="p-2 rounded-md hover:bg-red-600 transition">
+            <a href="https://medium.com/@divine_asiriuwa" target="_blank">
             <img src={medium} alt="" className='w-7' />
+            </a>
           </li>
         </ul>
 
