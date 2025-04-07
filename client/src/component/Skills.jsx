@@ -10,7 +10,7 @@ const Skills = () => {
     { Skill: "Ruby on Rails" },
     { Skill: "PostgreSQL" },
     { Skill: "TailwindCSS" },
-    { Skill: "Bootstrap" },
+    { Skill: "Express" },
   ];
 
   return (

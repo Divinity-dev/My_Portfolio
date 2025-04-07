@@ -57,10 +57,10 @@ const Project = () => {
                   {project.Desc}
                 </p>
                 <div className="flex justify-center gap-3">
-                  <button className="px-4 py-2 text-sm text-white bg-btyellow rounded-md">
+                  <button className="px-4 py-2 text-sm text-black  bg-btyellow rounded-md">
                     See Code
                   </button>
-                  <button className="px-4 py-2 text-sm text-white bg-btyellow rounded-md">
+                  <button className="px-4 py-2 text-sm text-black bg-btyellow rounded-md">
                     See Live
                   </button>
                 </div>

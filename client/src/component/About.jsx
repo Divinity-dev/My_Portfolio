@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinkedIn, Facebook, GitHub } from "@mui/icons-material";
 import profile from "/images/profile.png";
+import medium from "/images/medium.png"
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
             <Facebook />
           </li>
           <li className="p-2 rounded-md hover:bg-red-600 transition">
-            <LinkedIn />
+            <img src={medium} alt="" className='w-7' />
           </li>
         </ul>
 
@@ -49,7 +50,7 @@ const About = () => {
               based in the United States of America. I have earned recognition for building software solutions for businesses at IFBC.
               <br /><br />
               Click the button below to get my Resume.<br/>
-              <button className='px-6 p-2 text-white bg-btyellow mt-3 cursor-pointer'>Resume</button>
+              <button className='px-6 p-2 text-black bg-btyellow mt-3 cursor-pointer'>Resume</button>
             </p>
           </div>
         </div>
