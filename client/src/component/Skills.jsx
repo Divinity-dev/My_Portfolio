@@ -30,9 +30,11 @@ const Skills = () => {
     className='grid grid-cols-1 md:grid-cols-3 gap-4 bg-black p-6' id='skills'>
       {skills.map((item, index) => (
         <div key={index} className='text-white bg-gray-800 p-4 rounded shadow-md'>
-          <h2 className='font-bold text-center text-2xl'><a target='Blank' href={item.Link}> {item.Skill}</a></h2>
+          <h2 className='font-bold text-center text-2xl'>{item.Skill}</h2>
           <span className='underline block text-center mt-2 cursor-pointer'>
+            <a target='Blank' href={item.Link}> 
             View Project
+            </a>
           </span>
         </div>
       ))}
