@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import { projects } from "./ProjectDetails";
+import {motion} from "framer-motion"
+import CountUp from 'react-countup'
 
 const Project = () => {
   const [startIndex, setStartIndex] = useState(0); 
@@ -19,11 +21,23 @@ const Project = () => {
     );
   };
 
+  const cardVariants = {
+    hiddenLeft: { opacity: 0, x: -100 },
+    hiddenRight: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <div className="bg-indigo-950 px-6 py-10 md:px-20"id="projects">
       {/* Header Section */}
-      <div className="flex justify-between items-center text-white mb-6">
-        <h3 className="text-lg md:text-xl font-semibold">Projects</h3>
+      <motion.div 
+       initial="hiddenLeft"
+       whileInView="visible"
+       transition={{ duration: 0.6, delay: 0.8 }}
+       variants={cardVariants}
+       viewport={{ once: false, amount: 0.3 }}
+      className="flex justify-between items-center text-white mb-6">
+        <h3 className="text-lg md:text-xl font-semibold text-red-500">Projects(<CountUp end={30} duration={4} enableScrollSpy scrollSpyDelay={30}/>+)</h3>
         <div className="border-[1px] flex">
           <button onClick={handlePrev}>
             <ArrowBack onClick={()=>{setBg(false)}} className={bg? "bg-transparent":"bg-btyellow"}/>
@@ -32,10 +46,16 @@ const Project = () => {
             <ArrowForward onClick={()=>{setBg(true)}} className={bg? "bg-btyellow":"bg-transparent"}/>
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 text-white">
+      <motion.div 
+       initial="hiddenRight"
+       whileInView="visible"
+       transition={{ duration: 0.6, delay: 0.8 }}
+       variants={cardVariants}
+       viewport={{ once: false, amount: 0.3 }}
+      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 text-white">
         {projects
           .slice(startIndex, startIndex + projectsPerPage)
           .map((project) => (
@@ -58,17 +78,18 @@ const Project = () => {
                 </p>
                 <div className="flex justify-center gap-3">
                   <button className="px-4 py-2 text-sm text-black  bg-btyellow rounded-md">
-                    See Code
+                    <a target="Blank" href={project.Link2}>See Code</a>
+                    
                   </button>
                   <button className="px-4 py-2 text-sm text-black bg-btyellow rounded-md">
-                    See Live
+                  <a target="Blank" href={project.Link1}>See Live</a>
                   </button>
                 </div>
               </div>
             </div>
             </div>
           ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

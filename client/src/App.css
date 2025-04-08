@@ -31,4 +31,37 @@
   }
 }
 
+.after {
+  position: relative;
+  display: inline-block;
+}
+
+.after::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Customize width */
+  height: 3px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.contact {
+  position: relative;
+  display: inline-block;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Customize width */
+  height: 3px;
+  background-color: red;
+  border-radius: 5px;
+}
 

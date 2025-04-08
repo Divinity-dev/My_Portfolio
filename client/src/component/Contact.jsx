@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import phone from "/images/phone.png"
 import mail from "/images/Vector3.png"
 import Location from "/images/Location.png"
+import {motion} from "framer-motion"
+import CountUp from 'react-countup';
 
 const Contact = () => {
 
@@ -65,19 +67,36 @@ const Contact = () => {
           setErrors(validationErrors);
         }
       };
+      const cardVariants = {
+        hiddenLeft: { opacity: 0, x: -100 },
+        hiddenRight: { opacity: 0, x: 100 },
+        visible: { opacity: 1, x: 0 },
+      };
       
   return (
     <div className='py-10 px-20 bg-indigo-950 flex flex-col  items-center ' id='contact'>
-      <h2 className='text-center text-white text-3xl mb-4'>Contact me </h2>
+      <motion.h2 
+       initial="hiddenLeft"
+       whileInView="visible"
+       transition={{ duration: 0.6, delay: 0.8 }}
+       variants={cardVariants}
+       viewport={{ once: false, amount: 0.3 }}
+      className='text-center text-white text-3xl mb-4 contact'>Contact me </motion.h2>
       <div className='flex flex-col md:flex-row justify-between items-center'>
       {/* Left side */}
-      <div
+      <motion.div
+       initial="hiddenLeft"
+       whileInView="visible"
+       transition={{ duration: 0.6, delay: 0.8 }}
+       variants={cardVariants}
+       viewport={{ once: false, amount: 0.3 }}
         className="flex-1 flex flex-col px-6 sm:px-10 md:px-14 py-10"
       >
         <h2 className="text-3xl sm:text-4xl text-white font-bold mb-4">Get in Touch </h2>
         <p className="text-white mb-6">
         Let’s Build Something Great Together.<br/>
-Looking for a developer who can deliver seamless, scalable, and user-friendly web applications? I’m here to help bring your ideas to life.
+Looking for a developer who can deliver seamless, scalable, and user-friendly web applications with 
+<CountUp className='text-red-500 text-3xl' end={4} duration={4} enableScrollSpy scrollSpyDelay={4}/>years+ experience? I’m here to help bring your ideas to life.
 Get in touch — I’d love to hear from you!
         </p>
 
@@ -98,10 +117,16 @@ Get in touch — I’d love to hear from you!
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
         {/* Right side */}
-      <form ref={form} className="flex flex-col gap-4 w-full max-w-md mx-auto md:mx-0" onSubmit={handleSubmit}>
+      <motion.form
+       initial="hiddenLeft"
+       whileInView="visible"
+       transition={{ duration: 0.6, delay: 0.8 }}
+       variants={cardVariants}
+       viewport={{ once: false, amount: 0.3 }}
+      ref={form} className="flex flex-col gap-4 w-full max-w-md mx-auto md:mx-0" onSubmit={handleSubmit}>
           <div>
             <input
               type="text"
@@ -142,7 +167,7 @@ Get in touch — I’d love to hear from you!
           >
             Submit
           </button>
-        </form>
+        </motion.form>
         </div>
     </div>
   )
