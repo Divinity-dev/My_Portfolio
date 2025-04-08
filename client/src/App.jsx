@@ -1,12 +1,25 @@
 import { useState } from 'react'
+import Header from './component/Header'
+import About from './component/About'
+import Project from './component/Project'
+import "./app.css"
+import Navbar from './component/Navbar'
+import Skills from './component/Skills'
+import Contact from './component/Contact'
+import Footer from './component/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     <p className='text-center text-orange-800'>hello world</p>
+    <Navbar/>
+      <Header/>
+      <About/>
+      <Project/>
+      <Skills/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }
