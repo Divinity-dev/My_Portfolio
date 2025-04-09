@@ -5,6 +5,8 @@ import mail from "/images/Vector3.png"
 import Location from "/images/Location.png"
 import {motion} from "framer-motion"
 import CountUp from 'react-countup';
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
 
@@ -48,7 +50,7 @@ const Contact = () => {
             .then(
               () => {
                 console.log('SUCCESS!');
-                alert("Message sent successfully!");
+                toast("Message sent successfully!");
                 // Clear form after successful submission
                 setFormData({
                   fullName: "",
@@ -96,7 +98,7 @@ const Contact = () => {
         <p className="text-white mb-6">
         Let’s Build Something Great Together.<br/>
 Looking for a developer who can deliver seamless, scalable, and user-friendly web applications with 
-  <CountUp className='text-red-500 text-3xl' end={4} duration={4} enableScrollSpy scrollSpyDelay={4}/>years+ experience? I’m here to help bring your ideas to life.
+  <CountUp className='text-red-500 text-3xl ml-1' end={4} duration={4} enableScrollSpy scrollSpyDelay={4}/>years+ experience? I’m here to help bring your ideas to life.
 Get in touch — I’d love to hear from you!
         </p>
 
