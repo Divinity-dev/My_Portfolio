@@ -37,7 +37,7 @@ const Project = () => {
        variants={cardVariants}
        viewport={{ once: false, amount: 0.3 }}
       className="flex justify-between items-center text-white mb-6">
-        <h3 className="text-lg md:text-xl font-semibold text-red-500">Projects(<CountUp end={30} duration={4} enableScrollSpy scrollSpyDelay={30}/>+)</h3>
+        <h3 className="text-lg md:text-xl font-semibold text-white">Projects(<CountUp end={30} duration={4} enableScrollSpy scrollSpyDelay={30} className="text-red-500"/>+)</h3>
         <div className="border-[1px] flex">
           <button onClick={handlePrev}>
             <ArrowBack onClick={()=>{setBg(false)}} className={bg? "bg-transparent":"bg-btyellow"}/>
